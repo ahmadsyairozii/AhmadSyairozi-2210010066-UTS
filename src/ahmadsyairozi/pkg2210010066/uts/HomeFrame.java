@@ -5,6 +5,10 @@
  */
 package ahmadsyairozi.pkg2210010066.uts;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author User
@@ -81,8 +85,12 @@ public class HomeFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        AplikasiAgendaPribadiFrame kv = new AplikasiAgendaPribadiFrame();
-        kv.setVisible(true);
+        try {
+            AplikasiAgendaPribadiFrame kv = new AplikasiAgendaPribadiFrame();
+            kv.setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(HomeFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
