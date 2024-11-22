@@ -16,7 +16,6 @@ public class HomeFrame extends javax.swing.JFrame {
      */
     public HomeFrame() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -44,6 +43,11 @@ public class HomeFrame extends javax.swing.JFrame {
         jMenu1.setText("Aplikasi");
 
         jMenuItem1.setText("Aplikasi Agenda Pribadi");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
@@ -51,6 +55,11 @@ public class HomeFrame extends javax.swing.JFrame {
         jMenu2.setText("About");
 
         jMenuItem2.setText("Biodata");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuBar1.add(jMenu2);
@@ -70,6 +79,16 @@ public class HomeFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        AplikasiAgendaPribadiFrame kv = new AplikasiAgendaPribadiFrame();
+        kv.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        BiodataSyairoziFrame kv = new BiodataSyairoziFrame();
+        kv.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
